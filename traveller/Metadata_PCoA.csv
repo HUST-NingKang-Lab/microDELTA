@@ -1,0 +1,281 @@
+SampleID,Treatment,People,Group,Phase,Timepoint,Description,Env,is_MT10
+BJN1T1,BJN,BJN1,BJN,BJN,1,BJN1,root:China,False
+BJN1T2,BJN,BJN1,BJN,BJN,2,BJN1,root:China,False
+BJN1T3,BJN,BJN1,BJN,BJN,3,BJN1,root:China,False
+BJN1T4,BJN,BJN1,BJN,BJN,4,BJN1,root:China,False
+BJN1T5,BJN,BJN1,BJN,BJN,5,BJN1,root:China,False
+BJN1T6,BJN,BJN1,BJN,BJN,6,BJN1,root:China,False
+BJN10T1,BJN,BJN10,BJN,BJN,1,BJN10,root:China,False
+BJN10T2,BJN,BJN10,BJN,BJN,2,BJN10,root:China,False
+BJN10T3,BJN,BJN10,BJN,BJN,3,BJN10,root:China,False
+BJN10T4,BJN,BJN10,BJN,BJN,4,BJN10,root:China,False
+BJN10T5,BJN,BJN10,BJN,BJN,5,BJN10,root:China,False
+BJN10T6,BJN,BJN10,BJN,BJN,6,BJN10,root:China,False
+BJN2T1,BJN,BJN2,BJN,BJN,1,BJN2,root:China,False
+BJN2T2,BJN,BJN2,BJN,BJN,2,BJN2,root:China,False
+BJN2T3,BJN,BJN2,BJN,BJN,3,BJN2,root:China,False
+BJN2T4,BJN,BJN2,BJN,BJN,4,BJN2,root:China,False
+BJN2T5,BJN,BJN2,BJN,BJN,5,BJN2,root:China,False
+BJN2T6,BJN,BJN2,BJN,BJN,6,BJN2,root:China,False
+BJN3T1,BJN,BJN3,BJN,BJN,1,BJN3,root:China,False
+BJN3T2,BJN,BJN3,BJN,BJN,2,BJN3,root:China,False
+BJN3T3,BJN,BJN3,BJN,BJN,3,BJN3,root:China,False
+BJN3T4,BJN,BJN3,BJN,BJN,4,BJN3,root:China,False
+BJN3T5,BJN,BJN3,BJN,BJN,5,BJN3,root:China,False
+BJN3T6,BJN,BJN3,BJN,BJN,6,BJN3,root:China,False
+BJN4T1,BJN,BJN4,BJN,BJN,1,BJN4,root:China,False
+BJN4T2,BJN,BJN4,BJN,BJN,2,BJN4,root:China,False
+BJN4T3,BJN,BJN4,BJN,BJN,3,BJN4,root:China,False
+BJN4T4,BJN,BJN4,BJN,BJN,4,BJN4,root:China,False
+BJN4T5,BJN,BJN4,BJN,BJN,5,BJN4,root:China,False
+BJN4T6,BJN,BJN4,BJN,BJN,6,BJN4,root:China,False
+BJN5T1,BJN,BJN5,BJN,BJN,1,BJN5,root:China,False
+BJN5T2,BJN,BJN5,BJN,BJN,2,BJN5,root:China,False
+BJN5T3,BJN,BJN5,BJN,BJN,3,BJN5,root:China,False
+BJN5T4,BJN,BJN5,BJN,BJN,4,BJN5,root:China,False
+BJN5T5,BJN,BJN5,BJN,BJN,5,BJN5,root:China,False
+BJN5T6,BJN,BJN5,BJN,BJN,6,BJN5,root:China,False
+BJN6T2,BJN,BJN6,BJN,BJN,2,BJN6,root:China,False
+BJN6T3,BJN,BJN6,BJN,BJN,3,BJN6,root:China,False
+BJN6T4,BJN,BJN6,BJN,BJN,4,BJN6,root:China,False
+BJN6T5,BJN,BJN6,BJN,BJN,5,BJN6,root:China,False
+BJN6T6,BJN,BJN6,BJN,BJN,6,BJN6,root:China,False
+BJN7T1,BJN,BJN7,BJN,BJN,1,BJN7,root:China,False
+BJN7T2,BJN,BJN7,BJN,BJN,2,BJN7,root:China,False
+BJN7T3,BJN,BJN7,BJN,BJN,3,BJN7,root:China,False
+BJN7T4,BJN,BJN7,BJN,BJN,4,BJN7,root:China,False
+BJN8T1,BJN,BJN8,BJN,BJN,1,BJN8,root:China,False
+BJN8T2,BJN,BJN8,BJN,BJN,2,BJN8,root:China,False
+BJN8T3,BJN,BJN8,BJN,BJN,3,BJN8,root:China,False
+BJN8T4,BJN,BJN8,BJN,BJN,4,BJN8,root:China,False
+BJN8T5,BJN,BJN8,BJN,BJN,5,BJN8,root:China,False
+BJN8T6,BJN,BJN8,BJN,BJN,6,BJN8,root:China,False
+BJN9T1,BJN,BJN9,BJN,BJN,1,BJN9,root:China,False
+BJN9T2,BJN,BJN9,BJN,BJN,2,BJN9,root:China,False
+BJN9T3,BJN,BJN9,BJN,BJN,3,BJN9,root:China,False
+BJN9T4,BJN,BJN9,BJN,BJN,4,BJN9,root:China,False
+BJN9T5,BJN,BJN9,BJN,BJN,5,BJN9,root:China,False
+BJN9T6,BJN,BJN9,BJN,BJN,6,BJN9,root:China,False
+MTC1T1,MTC,MT1,MTC,T1,1,MT1,root:China:T1,False
+MTC1T2,MTC,MT1,MTC,T1,2,MT1,root:China:T1,False
+MTT1T4,MTT,MT1,MTT,T2,4,MT1,root:Trinidad and Tobago:T2,False
+MTT1T5,MTT,MT1,MTT,T2,5,MT1,root:Trinidad and Tobago:T2,False
+MTT1T11,MTT,MT1,MTT,T3,11,MT1,root:Trinidad and Tobago:T3,False
+MTT1T12,MTT,MT1,MTT,T3,12,MT1,root:Trinidad and Tobago:T3,False
+MTT1T13,MTT,MT1,MTT,T3,13,MT1,root:Trinidad and Tobago:T3,False
+MTT1T15,MTT,MT1,MTT,T3,15,MT1,root:Trinidad and Tobago:T3,False
+MTT1T8,MTT,MT1,MTT,T3,8,MT1,root:Trinidad and Tobago:T3,False
+MTT1T9,MTT,MT1,MTT,T3,9,MT1,root:Trinidad and Tobago:T3,False
+MTT1T17,MTT,MT1,MTT,T4,17,MT1,root:Trinidad and Tobago:T4,False
+MTC10T1,MTC,MT10,MTC,T1,1,MT10,root:China:T1,True
+MTC10T2,MTC,MT10,MTC,T1,2,MT10,root:China:T1,True
+MTT10T4,MTT,MT10,MTT,T2,4,MT10,root:Trinidad and Tobago:T2,True
+MTT10T5,MTT,MT10,MTT,T2,5,MT10,root:Trinidad and Tobago:T2,True
+MTT10T7,MTT,MT10,MTT,T2,7,MT10,root:Trinidad and Tobago:T2,True
+MTT10T11,MTT,MT10,MTT,T3,11,MT10,root:Trinidad and Tobago:T3,True
+MTT10T12,MTT,MT10,MTT,T3,12,MT10,root:Trinidad and Tobago:T3,True
+MTT10T13,MTT,MT10,MTT,T3,13,MT10,root:Trinidad and Tobago:T3,True
+MTT10T14,MTT,MT10,MTT,T3,14,MT10,root:Trinidad and Tobago:T3,True
+MTT10T15,MTT,MT10,MTT,T3,15,MT10,root:Trinidad and Tobago:T3,True
+MTT10T9,MTT,MT10,MTT,T3,9,MT10,root:Trinidad and Tobago:T3,True
+MTB10T16,MTB,MT10,MTB,T4,16,MT10,root:China:T4,True
+MTB10T17,MTB,MT10,MTB,T4,17,MT10,root:China:T4,True
+MTB10T18,MTB,MT10,MTB,T4,18,MT10,root:China:T4,True
+MTB10T19,MTB,MT10,MTB,T4,19,MT10,root:China:T4,True
+MTB10T20,MTB,MT10,MTB,T5,20,MT10,root:China:T5,True
+MTB10T21,MTB,MT10,MTB,T5,21,MT10,root:China:T5,True
+MTB10T23,MTB,MT10,MTB,T5,23,MT10,root:China:T5,True
+MTB10T24,MTB,MT10,MTB,T6,24,MT10,root:China:T6,True
+MTB10T25,MTB,MT10,MTB,T6,25,MT10,root:China:T6,True
+MTC2T1,MTC,MT2,MTC,T1,1,MT2,root:China:T1,False
+MTC2T2,MTC,MT2,MTC,T1,2,MT2,root:China:T1,False
+MTT2T4,MTT,MT2,MTT,T2,4,MT2,root:Trinidad and Tobago:T2,False
+MTT2T5,MTT,MT2,MTT,T2,5,MT2,root:Trinidad and Tobago:T2,False
+MTT2T7,MTT,MT2,MTT,T2,7,MT2,root:Trinidad and Tobago:T2,False
+MTT2T12,MTT,MT2,MTT,T3,12,MT2,root:Trinidad and Tobago:T3,False
+MTT2T13,MTT,MT2,MTT,T3,13,MT2,root:Trinidad and Tobago:T3,False
+MTT2T14,MTT,MT2,MTT,T3,14,MT2,root:Trinidad and Tobago:T3,False
+MTT2T15,MTT,MT2,MTT,T3,15,MT2,root:Trinidad and Tobago:T3,False
+MTT2T9,MTT,MT2,MTT,T3,9,MT2,root:Trinidad and Tobago:T3,False
+MTT2T17,MTT,MT2,MTT,T4,17,MT2,root:Trinidad and Tobago:T4,False
+MTT2T18,MTT,MT2,MTT,T4,18,MT2,root:Trinidad and Tobago:T4,False
+MTT2T19,MTT,MT2,MTT,T4,19,MT2,root:Trinidad and Tobago:T4,False
+MTB2T21,MTB,MT2,MTB,T5,21,MT2,root:China:T5,False
+MTB2T22,MTB,MT2,MTB,T5,22,MT2,root:China:T5,False
+MTB2T23,MTB,MT2,MTB,T5,23,MT2,root:China:T5,False
+MTB2T24,MTB,MT2,MTB,T5,24,MT2,root:China:T5,False
+MTB2T25,MTB,MT2,MTB,T6,25,MT2,root:China:T6,False
+MTC3T1,MTC,MT3,MTC,T1,1,MT3,root:China:T1,False
+MTC3T2,MTC,MT3,MTC,T1,2,MT3,root:China:T1,False
+MTT3T4,MTT,MT3,MTT,T2,4,MT3,root:Trinidad and Tobago:T2,False
+MTT3T5a,MTT,MT3,MTT,T2,5,MT3,root:Trinidad and Tobago:T2,False
+MTT3T5b,MTT,MT3,MTT,T2,6,MT3,root:Trinidad and Tobago:T2,False
+MTT3T7,MTT,MT3,MTT,T2,7,MT3,root:Trinidad and Tobago:T2,False
+MTT3T11,MTT,MT3,MTT,T3,11,MT3,root:Trinidad and Tobago:T3,False
+MTT3T12,MTT,MT3,MTT,T3,12,MT3,root:Trinidad and Tobago:T3,False
+MTT3T13,MTT,MT3,MTT,T3,13,MT3,root:Trinidad and Tobago:T3,False
+MTT3T14,MTT,MT3,MTT,T3,14,MT3,root:Trinidad and Tobago:T3,False
+MTT3T15,MTT,MT3,MTT,T3,15,MT3,root:Trinidad and Tobago:T3,False
+MTT3T9,MTT,MT3,MTT,T3,9,MT3,root:Trinidad and Tobago:T3,False
+MTT3T17,MTT,MT3,MTT,T4,17,MT3,root:Trinidad and Tobago:T4,False
+MTT3T18,MTT,MT3,MTT,T4,18,MT3,root:Trinidad and Tobago:T4,False
+MTT3T19,MTT,MT3,MTT,T4,19,MT3,root:Trinidad and Tobago:T4,False
+MTB3T21,MTB,MT3,MTB,T5,21,MT3,root:China:T5,False
+MTB3T22,MTB,MT3,MTB,T5,22,MT3,root:China:T5,False
+MTB3T23,MTB,MT3,MTB,T5,23,MT3,root:China:T5,False
+MTB3T24,MTB,MT3,MTB,T5,24,MT3,root:China:T5,False
+MTB3T25,MTB,MT3,MTB,T6,25,MT3,root:China:T6,False
+MTC4T1,MTC,MT4,MTC,T1,1,MT4,root:China:T1,False
+MTC4T2,MTC,MT4,MTC,T1,2,MT4,root:China:T1,False
+MTT4T12a,MTT,MT4,MTT,T3,12,MT4,root:Trinidad and Tobago:T3,False
+MTT4T12b,MTT,MT4,MTT,T3,13,MT4,root:Trinidad and Tobago:T3,False
+MTT4T14,MTT,MT4,MTT,T3,14,MT4,root:Trinidad and Tobago:T3,False
+MTT4T9a,MTT,MT4,MTT,T3,9,MT4,root:Trinidad and Tobago:T3,False
+MTT4T9b,MTT,MT4,MTT,T3,10,MT4,root:Trinidad and Tobago:T3,False
+MTT4T17,MTT,MT4,MTT,T4,17,MT4,root:Trinidad and Tobago:T4,False
+MTB4T21,MTB,MT4,MTB,T5,21,MT4,root:China:T5,False
+MTB4T22,MTB,MT4,MTB,T5,22,MT4,root:China:T5,False
+MTB4T23,MTB,MT4,MTB,T5,23,MT4,root:China:T5,False
+MTB4T24,MTB,MT4,MTB,T5,24,MT4,root:China:T5,False
+MTB4T25,MTB,MT4,MTB,T6,25,MT4,root:China:T6,False
+MTC5T1,MTC,MT5,MTC,T1,1,MT5,root:China:T1,False
+MTC5T2,MTC,MT5,MTC,T1,2,MT5,root:China:T1,False
+MTT5T4,MTT,MT5,MTT,T2,4,MT5,root:Trinidad and Tobago:T2,False
+MTT5T6,MTT,MT5,MTT,T2,6,MT5,root:Trinidad and Tobago:T2,False
+MTT5T7,MTT,MT5,MTT,T2,7,MT5,root:Trinidad and Tobago:T2,False
+MTT5T11,MTT,MT5,MTT,T3,11,MT5,root:Trinidad and Tobago:T3,False
+MTT5T12,MTT,MT5,MTT,T3,12,MT5,root:Trinidad and Tobago:T3,False
+MTT5T13,MTT,MT5,MTT,T3,13,MT5,root:Trinidad and Tobago:T3,False
+MTT5T14,MTT,MT5,MTT,T3,14,MT5,root:Trinidad and Tobago:T3,False
+MTT5T15,MTT,MT5,MTT,T3,15,MT5,root:Trinidad and Tobago:T3,False
+MTT5T9,MTT,MT5,MTT,T3,9,MT5,root:Trinidad and Tobago:T3,False
+MTT5T17,MTT,MT5,MTT,T4,17,MT5,root:Trinidad and Tobago:T4,False
+MTT5T18,MTT,MT5,MTT,T4,18,MT5,root:Trinidad and Tobago:T4,False
+MTT5T19,MTT,MT5,MTT,T4,19,MT5,root:Trinidad and Tobago:T4,False
+MTB5T21,MTB,MT5,MTB,T5,21,MT5,root:China:T5,False
+MTB5T22,MTB,MT5,MTB,T5,22,MT5,root:China:T5,False
+MTB5T23,MTB,MT5,MTB,T5,23,MT5,root:China:T5,False
+MTB5T24,MTB,MT5,MTB,T5,24,MT5,root:China:T5,False
+MTB5T25,MTB,MT5,MTB,T6,25,MT5,root:China:T6,False
+MTC6T1,MTC,MT6,MTC,T1,1,MT6,root:China:T1,False
+MTC6T2,MTC,MT6,MTC,T1,2,MT6,root:China:T1,False
+MTT6T3,MTT,MT6,MTT,T2,3,MT6,root:Trinidad and Tobago:T2,False
+MTT6T4,MTT,MT6,MTT,T2,4,MT6,root:Trinidad and Tobago:T2,False
+MTT6T5,MTT,MT6,MTT,T2,5,MT6,root:Trinidad and Tobago:T2,False
+MTT6T7,MTT,MT6,MTT,T2,7,MT6,root:Trinidad and Tobago:T2,False
+MTT6T11,MTT,MT6,MTT,T3,11,MT6,root:Trinidad and Tobago:T3,False
+MTT6T12,MTT,MT6,MTT,T3,12,MT6,root:Trinidad and Tobago:T3,False
+MTT6T13,MTT,MT6,MTT,T3,13,MT6,root:Trinidad and Tobago:T3,False
+MTT6T14,MTT,MT6,MTT,T3,14,MT6,root:Trinidad and Tobago:T3,False
+MTT6T15,MTT,MT6,MTT,T3,15,MT6,root:Trinidad and Tobago:T3,False
+MTT6T16,MTT,MT6,MTT,T3,16,MT6,root:Trinidad and Tobago:T3,False
+MTT6T8,MTT,MT6,MTT,T3,8,MT6,root:Trinidad and Tobago:T3,False
+MTT6T9,MTT,MT6,MTT,T3,9,MT6,root:Trinidad and Tobago:T3,False
+MTT6T17,MTT,MT6,MTT,T4,17,MT6,root:Trinidad and Tobago:T4,False
+MTT6T18,MTT,MT6,MTT,T4,18,MT6,root:Trinidad and Tobago:T4,False
+MTT6T19,MTT,MT6,MTT,T4,19,MT6,root:Trinidad and Tobago:T4,False
+MTB6T21,MTB,MT6,MTB,T5,21,MT6,root:China:T5,False
+MTB6T22,MTB,MT6,MTB,T5,22,MT6,root:China:T5,False
+MTB6T23,MTB,MT6,MTB,T5,23,MT6,root:China:T5,False
+MTB6T24,MTB,MT6,MTB,T5,24,MT6,root:China:T5,False
+MTB6T25,MTB,MT6,MTB,T6,25,MT6,root:China:T6,False
+MTB6T26,MTB,MT6,MTB,T6,26,MT6,root:China:T6,False
+MTB6T27,MTB,MT6,MTB,T6,27,MT6,root:China:T6,False
+MTB6T28,MTB,MT6,MTB,T6,28,MT6,root:China:T6,False
+MTB6T29,MTB,MT6,MTB,T6,29,MT6,root:China:T6,False
+MTC7T1,MTC,MT7,MTC,T1,1,MT7,root:China:T1,False
+MTC7T2,MTC,MT7,MTC,T1,2,MT7,root:China:T1,False
+MTT7T3,MTT,MT7,MTT,T2,3,MT7,root:Trinidad and Tobago:T2,False
+MTT7T4,MTT,MT7,MTT,T2,4,MT7,root:Trinidad and Tobago:T2,False
+MTT7T5,MTT,MT7,MTT,T2,5,MT7,root:Trinidad and Tobago:T2,False
+MTT7T7,MTT,MT7,MTT,T2,7,MT7,root:Trinidad and Tobago:T2,False
+MTT7T10,MTT,MT7,MTT,T3,10,MT7,root:Trinidad and Tobago:T3,False
+MTT7T12,MTT,MT7,MTT,T3,12,MT7,root:Trinidad and Tobago:T3,False
+MTT7T13,MTT,MT7,MTT,T3,13,MT7,root:Trinidad and Tobago:T3,False
+MTT7T14,MTT,MT7,MTT,T3,14,MT7,root:Trinidad and Tobago:T3,False
+MTT7T8,MTT,MT7,MTT,T3,8,MT7,root:Trinidad and Tobago:T3,False
+MTT7T9,MTT,MT7,MTT,T3,9,MT7,root:Trinidad and Tobago:T3,False
+MTT7T17,MTT,MT7,MTT,T4,17,MT7,root:Trinidad and Tobago:T4,False
+MTT7T18,MTT,MT7,MTT,T4,18,MT7,root:Trinidad and Tobago:T4,False
+MTT7T19,MTT,MT7,MTT,T4,19,MT7,root:Trinidad and Tobago:T4,False
+MTB7T21,MTB,MT7,MTB,T5,21,MT7,root:China:T5,False
+MTB7T22,MTB,MT7,MTB,T5,22,MT7,root:China:T5,False
+MTB7T23,MTB,MT7,MTB,T5,23,MT7,root:China:T5,False
+MTB7T24,MTB,MT7,MTB,T5,24,MT7,root:China:T5,False
+MTC8T1,MTC,MT8,MTC,T1,1,MT8,root:China:T1,False
+MTC8T2,MTC,MT8,MTC,T1,2,MT8,root:China:T1,False
+MTT8T4,MTT,MT8,MTT,T2,4,MT8,root:Trinidad and Tobago:T2,False
+MTT8T6,MTT,MT8,MTT,T2,6,MT8,root:Trinidad and Tobago:T2,False
+MTT8T7,MTT,MT8,MTT,T2,7,MT8,root:Trinidad and Tobago:T2,False
+MTT8T11,MTT,MT8,MTT,T3,11,MT8,root:Trinidad and Tobago:T3,False
+MTT8T12,MTT,MT8,MTT,T3,12,MT8,root:Trinidad and Tobago:T3,False
+MTT8T13,MTT,MT8,MTT,T3,13,MT8,root:Trinidad and Tobago:T3,False
+MTT8T14,MTT,MT8,MTT,T3,14,MT8,root:Trinidad and Tobago:T3,False
+MTT8T15,MTT,MT8,MTT,T3,15,MT8,root:Trinidad and Tobago:T3,False
+MTT8T9,MTT,MT8,MTT,T3,9,MT8,root:Trinidad and Tobago:T3,False
+MTT8T17,MTT,MT8,MTT,T4,17,MT8,root:Trinidad and Tobago:T4,False
+MTB8T21,MTB,MT8,MTB,T5,21,MT8,root:China:T5,False
+MTB8T22,MTB,MT8,MTB,T5,22,MT8,root:China:T5,False
+MTB8T23,MTB,MT8,MTB,T5,23,MT8,root:China:T5,False
+MTB8T24,MTB,MT8,MTB,T5,24,MT8,root:China:T5,False
+MTB8T25,MTB,MT8,MTB,T6,25,MT8,root:China:T6,False
+MTB8T26,MTB,MT8,MTB,T6,26,MT8,root:China:T6,False
+MTB8T27,MTB,MT8,MTB,T6,27,MT8,root:China:T6,False
+MTB8T28,MTB,MT8,MTB,T6,28,MT8,root:China:T6,False
+MTB8T29,MTB,MT8,MTB,T6,29,MT8,root:China:T6,False
+MTB8T30,MTB,MT8,MTB,T6,30,MT8,root:China:T6,False
+MTC9T1,MTC,MT9,MTC,T1,1,MT9,root:China:T1,False
+MTC9T2,MTC,MT9,MTC,T1,2,MT9,root:China:T1,False
+MTT9T4,MTT,MT9,MTT,T2,4,MT9,root:Trinidad and Tobago:T2,False
+MTT9T6,MTT,MT9,MTT,T2,6,MT9,root:Trinidad and Tobago:T2,False
+MTT9T11,MTT,MT9,MTT,T3,11,MT9,root:Trinidad and Tobago:T3,False
+MTT9T12,MTT,MT9,MTT,T3,12,MT9,root:Trinidad and Tobago:T3,False
+MTT9T13,MTT,MT9,MTT,T3,13,MT9,root:Trinidad and Tobago:T3,False
+MTT9T14,MTT,MT9,MTT,T3,14,MT9,root:Trinidad and Tobago:T3,False
+MTT9T15,MTT,MT9,MTT,T3,15,MT9,root:Trinidad and Tobago:T3,False
+MTT9T9,MTT,MT9,MTT,T3,9,MT9,root:Trinidad and Tobago:T3,False
+MTT9T17,MTT,MT9,MTT,T4,17,MT9,root:Trinidad and Tobago:T4,False
+MTT9T18,MTT,MT9,MTT,T4,18,MT9,root:Trinidad and Tobago:T4,False
+MTB9T21,MTB,MT9,MTB,T5,21,MT9,root:China:T5,False
+MTB9T22,MTB,MT9,MTB,T5,22,MT9,root:China:T5,False
+MTB9T23,MTB,MT9,MTB,T5,23,MT9,root:China:T5,False
+MTB9T24,MTB,MT9,MTB,T5,24,MT9,root:China:T5,False
+MTB9T25,MTB,MT9,MTB,T6,25,MT9,root:China:T6,False
+MTT9T26,MTT,MT9,MTB,T6,26,MT9,root:China:T6,False
+MTB9T27,MTB,MT9,MTC,T6,27,MT9,root:China:T6,False
+TTC1T1,TTC,TTC1,TTC,TTC,1,TTC1,root:Trinidad and Tobago,False
+TTC1T2,TTC,TTC1,TTC,TTC,2,TTC1,root:Trinidad and Tobago,False
+TTC2T1,TTC,TTC2,TTC,TTC,1,TTC2,root:Trinidad and Tobago,False
+TTC2T2,TTC,TTC2,TTC,TTC,2,TTC2,root:Trinidad and Tobago,False
+TTC3T1,TTC,TTC3,TTC,TTC,1,TTC3,root:Trinidad and Tobago,False
+TTC3T2,TTC,TTC3,TTC,TTC,2,TTC3,root:Trinidad and Tobago,False
+TTC4T1,TTC,TTC4,TTC,TTC,1,TTC4,root:Trinidad and Tobago,False
+TTC4T2,TTC,TTC4,TTC,TTC,2,TTC4,root:Trinidad and Tobago,False
+TTN1T1,TTN,TTN1,TTN,TTN,1,TTN1,root:Trinidad and Tobago,False
+TTN1T2,TTN,TTN1,TTN,TTN,2,TTN1,root:Trinidad and Tobago,False
+TTN10T1,TTN,TTN10,TTN,TTN,1,TTN10,root:Trinidad and Tobago,False
+TTN10T2,TTN,TTN10,TTN,TTN,2,TTN10,root:Trinidad and Tobago,False
+TTN11T1,TTN,TTN11,TTN,TTN,1,TTN11,root:Trinidad and Tobago,False
+TTN11T2,TTN,TTN11,TTN,TTN,2,TTN11,root:Trinidad and Tobago,False
+TTN12T1,TTN,TTN12,TTN,TTN,1,TTN12,root:Trinidad and Tobago,False
+TTN12T2,TTN,TTN12,TTN,TTN,2,TTN12,root:Trinidad and Tobago,False
+TTN13T1,TTN,TTN13,TTN,TTN,1,TTN13,root:Trinidad and Tobago,False
+TTN13T2,TTN,TTN13,TTN,TTN,2,TTN13,root:Trinidad and Tobago,False
+TTN14T1,TTN,TTN14,TTN,TTN,1,TTN14,root:Trinidad and Tobago,False
+TTN14T2,TTN,TTN14,TTN,TTN,2,TTN14,root:Trinidad and Tobago,False
+TTN2T1,TTN,TTN2,TTN,TTN,1,TTN2,root:Trinidad and Tobago,False
+TTN2T2,TTN,TTN2,TTN,TTN,2,TTN2,root:Trinidad and Tobago,False
+TTN3T1,TTN,TTN3,TTN,TTN,1,TTN3,root:Trinidad and Tobago,False
+TTN3T2,TTN,TTN3,TTN,TTN,2,TTN3,root:Trinidad and Tobago,False
+TTN4T1,TTN,TTN4,TTN,TTN,1,TTN4,root:Trinidad and Tobago,False
+TTN4T2,TTN,TTN4,TTN,TTN,2,TTN4,root:Trinidad and Tobago,False
+TTN5T1,TTN,TTN5,TTN,TTN,1,TTN5,root:Trinidad and Tobago,False
+TTN5T2,TTN,TTN5,TTN,TTN,2,TTN5,root:Trinidad and Tobago,False
+TTN6T1,TTN,TTN6,TTN,TTN,1,TTN6,root:Trinidad and Tobago,False
+TTN6T2,TTN,TTN6,TTN,TTN,2,TTN6,root:Trinidad and Tobago,False
+TTN7T1,TTN,TTN7,TTN,TTN,1,TTN7,root:Trinidad and Tobago,False
+TTN7T2,TTN,TTN7,TTN,TTN,2,TTN7,root:Trinidad and Tobago,False
+TTN8T1,TTN,TTN8,TTN,TTN,1,TTN8,root:Trinidad and Tobago,False
+TTN8T2,TTN,TTN8,TTN,TTN,2,TTN8,root:Trinidad and Tobago,False
+TTN9T1,TTN,TTN9,TTN,TTN,1,TTN9,root:Trinidad and Tobago,False
+TTN9T2,TTN,TTN9,TTN,TTN,2,TTN9,root:Trinidad and Tobago,False
