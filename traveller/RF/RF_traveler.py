@@ -27,22 +27,6 @@ meta_position = metadata[['Treatment','People']]
 meta_position['Treatment'] = meta_position['Treatment'].apply(TransToDestination)
 meta_no_MT10 = meta_position[meta_position['People'] != 'MT10']    # For source
 
-# worst auc of RF
-worst_auc = 1.0
-for state in range(100):
-    rfc = RandomForestClassifier(random_state = state)
-    X_train = abundance.loc[meta_no_MT10['Treatment'].index]
-    y_train = meta_position.loc[X_train.index, 'Treatment']
-    X_test = abundance.loc[meta_position['People'] == 'MT10']
-    y_test = meta_position.loc[X_test.index, 'Treatment']
-
-    rfc = rfc.fit(X_train, y_train)
-    y_prob = rfc.predict_proba(X_test)
-    auc_roc = roc_auc_score(y_test, y_prob[:,1])
-    if auc_roc < worst_auc:
-        worst_auc = auc_roc
-        print(f'state: {state}, worst auc: {worst_auc}')
-
 # Leve individual out
 individuals = ['MT1', 'MT2', 'MT3','MT4', 'MT5', 'MT6', 'MT7', 'MT8', 'MT9', 'MT10']
 result_df = pd.DataFrame(columns = ['BJN', 'TT']).astype(float)
