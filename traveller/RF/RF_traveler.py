@@ -1,3 +1,4 @@
+from matplotlib.pyplot import title
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
@@ -44,6 +45,7 @@ for exp, i in enumerate(individuals):
     result_df = pd.concat([result_df, RF(X_train, y_train, X_test)])
 
 result_df.to_csv('RF_result.csv')
+result_df = pd.read_csv('RF_result.csv', index_col = 0)
 
 # Plot
 matplotlib.rcParams['pdf.fonttype'] = 42
@@ -84,6 +86,7 @@ plot = (ggplot(data, aes(x='Timepoint_str', y='TT'))
         + scale_x_discrete(limits=contributions['Timepoint_str'].unique())
         + xlab('Time point')
         + ylab('Contribution from "Trinidad and Tobago"')
+        + ggtitle('Random Forest result on the traveler cohort')
 )
 
 print(plot)

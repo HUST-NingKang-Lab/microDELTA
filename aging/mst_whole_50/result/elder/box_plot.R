@@ -33,7 +33,7 @@ inde.box.Plot <- ggplot(inde.Data)+
                         legend.position = (c(0.9, 0.88)),
                         legend.background = element_blank(),
                         legend.key.size = unit(0.3, 'cm'))
-ggsave('independent_box_plot_elder.jpg', height = 70, width = 100, units = 'mm')
+ggsave('independent_box_plot_elder.pdf', dpi = 300, height = 70, width = 100, units = 'mm')
 
 trans.box.Plot <- ggplot(trans.Data)+
                 geom_boxplot(width = 0.5, aes(x=Env, y=Contribution, fill=Region), outlier.size = 0.5)+
@@ -54,4 +54,4 @@ trans.box.Plot <- ggplot(trans.Data)+
                         legend.position = (c(0.9, 0.88)),
                         legend.background = element_blank(),
                         legend.key.size = unit(0.3, 'cm'))
-ggsave('transfer_box_plot_elder.jpg', height = 70, width = 100, units = 'mm')
+ggsave('transfer_box_plot_elder.pdf', dpi = 300, height = 70, width = 100, units = 'mm')

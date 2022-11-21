@@ -1,3 +1,4 @@
+from matplotlib.pyplot import title
 import pandas as pd
 import numpy as np
 import matplotlib
@@ -6,7 +7,7 @@ from plotnine import*
 matplotlib.rcParams['pdf.fonttype'] = 42
 
 suffix = 'Transfer_DM'
-contributions = pd.concat([pd.read_csv('experiments_repeat/exp_{}/Search_{}/layer-2.csv'.format(i, suffix), index_col=0) for i in range(1, 11)])
+contributions = pd.concat([pd.read_csv('nn_result/exp_{}/Search/layer-2.csv'.format(i), index_col=0) for i in range(1, 11)])
 metadata = pd.read_csv('dataFiles/metadata.csv').set_index('#SampleID')
 contributions = contributions.join(metadata, how='left')
 #contributions = contributions[contributions.Phase != 'T6']
@@ -41,7 +42,8 @@ plot = (ggplot(data, aes(x='Timepoint_str', y='root:TT'))
         + scale_x_discrete(limits=contributions['Timepoint_str'].unique())
         + xlab('Time point')
         + ylab('Contribution from "Trinidad and Tobago"')
+        + ggtitle('Neural Network result on the traveler cohort')
 )
 
 print(plot)
-plot.save('Figure_repeat.png', dpi=300, width=6.4*1.5, height=4.8)
+plot.save('Figure_nn.pdf', dpi=300, width=6.4*1.5, height=4.8)

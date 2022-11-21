@@ -26,4 +26,4 @@ p1 = ggplot(plot.data, aes(x=Env, y=ROC.AUC, fill=mode))+
         legend.position = c(0.92, 0.11))
 p1
 
-ggsave('r-plot-data.jpg', height = 100, width = 200, units = 'mm')
+ggsave('r-plot-data.pdf', dpi = 300, height = 100, width = 200, units = 'mm')

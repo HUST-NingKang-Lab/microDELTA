@@ -39,14 +39,9 @@ if __name__ == '__main__':
     print(metaWhole.value_counts())
     
     # whole data with region of centenarian
-    # metaRegion = metaRaw.copy()
-    # metaRegion['Age'] = metaRegion['Age'].apply(AgeGroup)
-    # for i in metaRegion.index:
-    #     if metaRegion.loc[i, 'Age'] == 'Elder':
-    #         metaRegion.loc[i, 'Age'] = metaRegion.loc[i, 'Age'] + ' ' + metaRegion.loc[i, 'Region']
-    # metaRegion.rename(columns={'Age': 'Env'}, inplace=True)
-    # metaRegion = metaRegion.loc[abundanceRaw.columns]
-    # metaRegion['Env'].to_csv('metadata_whole_with_region.csv')
+    metaRegion = metaRaw.copy()
+    metaRegion['Age'] = metaRegion['Age'].apply(AgeGroup)
+    metaRegion['Region'].to_csv('region_whole.csv')
     
     
     # Sichuan data

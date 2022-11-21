@@ -43,7 +43,8 @@ box_plot <-ggplot(shannon_result, aes(x = Env, y = shannon, fill = Env)) +
             ylab("Simpson index") +
             ylim(c(0, 1.5)) +
             annotate(geom = "text",
-                        label = paste("Wilconxon, ", italic_p, p.val, sep = ''),
+                        # label = paste("Wilconxon, ", italic_p, p.val, sep = ''),
+                        label = paste("Wilconxon, p = ", p.val, sep = ''),
                         x = 1.5,
                         y = 1.4,
                         size = 3) +
@@ -58,4 +59,4 @@ box_plot <-ggplot(shannon_result, aes(x = Env, y = shannon, fill = Env)) +
                     panel.grid.major = element_blank(), 
                     panel.grid.minor = element_blank(),
                     panel.background = element_blank(),)
-ggsave('Simpson_Diversity.png', height = 70, width = 100, units = 'mm')
+ggsave('Simpson_Diversity.pdf', dpi = 300, height = 70, width = 100, units = 'mm')

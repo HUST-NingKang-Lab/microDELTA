@@ -26,7 +26,7 @@ if __name__ == '__main__':
 			        xlab('PC1') +
 			        ylab('PC2'))
     
-    pcoa_plot.save('PCoA.png')
+    pcoa_plot.save('PCoA.pdf', dpi = 300)
 
     box_1 = (ggplot(pcoa_df, aes(x=metadata, y='PC1', fill=metadata))
 			+ geom_boxplot(width=0.3, show_legend=False)
@@ -39,7 +39,7 @@ if __name__ == '__main__':
 			+ coord_flip()
    			+ xlim(['B', '4M', '12M', '3Y', '5Y', 'M'])
 		   )
-    box_1.save('PC1_box.png')
+    box_1.save('PC1_box.pdf', dpi = 300)
 
     box_2 = (ggplot(pcoa_df, aes(x=metadata, y='PC2', fill=metadata))
 			+ geom_boxplot(width=0.3, show_legend=False)
@@ -51,4 +51,4 @@ if __name__ == '__main__':
 			+ ylab('PC2')
 			+ xlim(['B', '4M', '12M', '3Y', '5Y', 'M'])
 		   )
-    box_2.save('PC2_box.png')
+    box_2.save('PC2_box.pdf', dpi = 300)
