@@ -8,7 +8,7 @@ expert map --to-otlg -t ontology.pkl -i experiments_repeat/exp_$i/QueryMapper.cs
 
 expert transfer -i experiments_repeat/exp_$i/SourceCM.h5 -t ontology.pkl \
         -l experiments_repeat/exp_$i/SourceLabels.h5 -o experiments_repeat/exp_$i/Transfer_DM \
-        -m ../../Longevity_research/mst/model/disease_model --finetune --update-statistics;
+        -m ../aging/mst/model/base_model --finetune --update-statistics;
 expert search -i experiments_repeat/exp_$i/QueryCM.h5 -m experiments_repeat/exp_$i/Transfer_DM -o experiments_repeat/exp_$i/Search_Transfer_DM;
 expert evaluate -i experiments_repeat/exp_$i/Search_Transfer_DM -l experiments_repeat/exp_$i/QueryLabels.h5 -o experiments_repeat/exp_$i/Eval_Transfer_DM -S 0;
 done
