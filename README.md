@@ -4,7 +4,7 @@ Human gut microbiome is highly dynamic along the life span. Though human gut mic
 In this study, we used microDELTA, a deep learning method based on neural network and transfer learning, for tracking the longitudinal microbial community alterations in diverse contexts. We demonstrated the use of microDELTA to accurate modeling for dynamic patterns of human gut microbial communities at several life stages, including infancy, middle age and the elderly. First, we used microDELTA to illustrate the influence of delivery mode on infant gut microbial communities based on an infant cohort. Second, we examined the spatial-temporal dynamic pattern of gut microbial communities for long-term dietary shifts during international travel based on a Chinese traveler cohort. Third, we explored the seasonal dynamic patterns of gut microbial communities for the Hadza hunter-gatherers. Finally, we analyzed the distinctive gut microbial pattern for elderly people. The analyses of these contexts elucidate how well the transfer learning model-based approach can utilize human gut microbial communities for human life trajectory analysis, which is critical for microbial community- based context-aware health monitoring and clinical practice.
 
 ## Pipeline
-![](EXPERT_longitudinal.png)
+![](microDELTA.png)
 
 ## Example
 We take the Chinese traveler cohort as an example to describe the input data of microDELTA.
