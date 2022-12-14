@@ -60,13 +60,13 @@ We also describe the details of our pipeline below.
 
 ## Pipeline details
 ### Ontology construct
-The microDELTA pipeline includes several steps. First, the ontology of the gut microbiome is constructed by creating a hierarchy of bacterial taxa and linking them to different host statuses. This step is performed using the `expert construct` command, which takes as input a text file [microbiomes.txt]('traveler/microbiomes.txt') containing the host statuses and produces an ontology file in the form of a pickle object.
+The microDELTA pipeline includes several steps. First, the ontology of the gut microbiome is constructed by creating a hierarchy of host statuses. This step is performed using the `expert construct` command, which takes as input a text file [microbiomes.txt]('traveler/microbiomes.txt') containing the host statuses and produces an ontology file in the form of a pickle object.
 ```
 expert construct -i microbiomes.txt -o ontology.pkl
 ```
 ![](readme_figure/step1.jpg)
 #### Data convert
-Next, the input data are converted into a format that can be used by the model. This is done using the `expert convert` command, which takes as input a directory containing the input files ([SourceCM.tsv](traveler/experiments_repeat/exp_1/SourceCM.tsv ) and [QueryCM.tsv](traveler/experiments_repeat/exp_1/QueryCM.tsv)) and produces a binary data file in the h5 format.
+Next, the abundance data are converted into a format that can be used by the model. This is done using the `expert convert` command, which takes as input a directory containing the input files ([SourceCM.tsv](traveler/experiments_repeat/exp_1/SourceCM.tsv ) and [QueryCM.tsv](traveler/experiments_repeat/exp_1/QueryCM.tsv)) and produces a binary data file in the h5 format.
 
 ```
 ls experiments_repeat/exp_1/SourceCM.tsv > tmp
