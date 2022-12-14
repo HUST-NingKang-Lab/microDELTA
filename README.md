@@ -65,7 +65,7 @@ The microDELTA pipeline includes several steps. First, the ontology of the gut m
 expert construct -i microbiomes.txt -o ontology.pkl
 ```
 ![](readme_figure/step1.jpg)
-#### Data convert
+### Data convert
 Next, the abundance data are converted into a format that can be used by the model. This is done using the `expert convert` command, which takes as input a directory containing the input files ([SourceCM.tsv](traveler/experiments_repeat/exp_1/SourceCM.tsv ) and [QueryCM.tsv](traveler/experiments_repeat/exp_1/QueryCM.tsv)) and produces a binary data file in the h5 format.
 
 ```
@@ -76,7 +76,7 @@ ls experiments_repeat/exp_1/QueryCM.tsv > tmp
 expert convert -i tmp --in-cm -o experiments_repeat/exp_1/QueryCM.h5
 ```
 ![](readme_figure/step2.jpg)
-#### Source mapping
+### Source mapping
 The status of each sample can be mapped to the ontology using the `expert map` command. This step associates each sample in the input data ([SourceMapper.csv](traveler/experiments_repeat/exp_1/SourceMapper.csv) and [QueryMapper.csv](traveler/experiments_repeat/exp_1/QueryMapper.csv)) with a specific host status, based on the ontology.
 ```
 expert map --to-otlg -t ontology.pkl -i experiments_repeat/exp_1/SourceMapper.csv -o experiments_repeat/exp_1/SourceLabels.h5
@@ -84,7 +84,7 @@ expert map --to-otlg -t ontology.pkl -i experiments_repeat/exp_1/SourceMapper.cs
 expert map --to-otlg -t ontology.pkl -i nn_result/exp_1/QueryMapper.csv -o nn_result/exp_1/QueryLabels.h5
 ```
 ![](readme_figure/step3.jpg)
-#### Train the model
+### Train the model
 With the input data prepared, the model can be trained using the `expert transfer` command. This step uses transfer learning to fine-tune a pre-trained [base model](aging/mst/model/disease_model)  to the specific input data. The resulting model can then be used to make predictions about the gut microbiome of new hosts.
 ```
 expert transfer -i experiments_repeat/exp_1/SourceCM.h5 -t ontology.pkl \
