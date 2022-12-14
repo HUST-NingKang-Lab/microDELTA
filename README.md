@@ -1,42 +1,65 @@
 # microDELTA
-microDELTA is a deep learning method for tracing longitudinal changes in the human gut microbiome. The method is based on neural networks and transfer learning, and can be used to model dynamic patterns of gut microbial communities at different life stages, including infancy, middle age, and old age. The method takes as input two files containing the abundance of gut microbial communities for a given set of hosts, and uses these data to train a model that can be used to make predictions about the gut microbiome of new hosts. The method also includes an ontology construction step and a data conversion step to make the input data compatible with the model. 
+microDELTA is a deep learning method for tracing longitudinal changes in the human gut microbiome. The method is based on neural networks and transfer learning, and can be used to model dynamic patterns of gut microbial communities at different life stages, including infancy, middle age, and old age. The method takes as input two files containing the abundance of gut microbial communities for a given set of hosts, and uses these data to train a model that can be used to make predictions about the gut microbiome of new hosts. The method also includes an ontology construction step and a data conversion step to make the input data compatible with the model. We have examined microDELTA in several representative contexts: ranging from birth through adulthood to elderly. First, we used microDELTA to illustrate the influence of delivery mode on infant gut microbial communities based on an infant cohort. Second, we examined the spatial-temporal dynamic pattern of gut microbial communities for long-term dietary shifts during international travel based on a Chinese traveler cohort. Third, we explored the seasonal dynamic patterns of gut microbial communities for the Hadza hunter-gatherers. Finally, we analyzed the distinctive gut microbial pattern for elderly people.
 
-## Pipeline
 ![](microDELTA.png)
 
-### Requirement
+## Requirement
 The microDELTA method is based on [EXPERT](https://github.com/HUST-NingKang-Lab/EXPERT). Install EXPERT using pip:
 ```
 pip install expert-mst    # Install EXPERT
 expert init               # Initialize EXPERT and install NCBI taxonomy database
 ```
+## Command line instructions
+```
+optional arguments:
+  -h, --help            show this help message and exit
+  -O OVERALL, --overall Overall status of the hosts in csv format
+  -l LABEL, --label Label of the hosts in csv format
+  -S SOURCE, --source Abundance of training samples in tsv format
+  -Q QUERY, --query Abundance of testing samples in tsv format
+  -m MODEL, --model Base model directory. If not specified, an independent model will be trained
+  -o OUTPUT, --output Directory to store the result
 
-### Input files
-A `txt` file contains the overall status of the hosts named `microbiomes.txt`. The content in this file include the class of host status like:
+```
+## Input files
+A `txt` file contains the overall status of the hosts. The content in this file include the class of host status like:
 ```
 root:status1
 root:status2
 ```
-A `csv` file contains the metadata of the hosts named `SourceMapper.csv`. The first column named `SampleID` contains the index of each host and the second column named `Env` contains the status of each host like:
-```
-SampleID,Env
-host1,status1
-host2, status2
-host3, status3
-..., ...
-```
-Two `tsv` files contain the abundance of gut microbial communities of each host named `SourceCM.tsv` and `QueryCM.tsv`. The columns represent hosts and the rows represents features. We consider `SourceCM.tsv` for training and `QueryCM.tsv` for validating like:
-```
-#OTU ID host1, host2    ...
-microbe1    0   0   ...
-microbe2    0   0   ...
-... ... ...
-```
+A `csv` file contains the metadata of the. The first column named `SampleID` contains the index of each host and the second column named `Env` contains the status of each host like:
+|SampleID|Env|
+|---|---|
+|host1|status1|
+|host2|status2|
+|host3|status3|
+|...|...|
 
-### Example
+Two `tsv` files contain the abundance of gut microbial communities of training sample and testing sample. The columns represent hosts and the rows represents features. We consider `SourceCM.tsv` for training and `QueryCM.tsv` for validating like:
+
+|#OTU ID| host1| host2|...|
+|---|---|---|---|
+|microbe1|0|0|...|
+|microbe2|0|0|...|
+|...|...|...|...|
+
+
+## Example
 We take a experiment of the Chinese traveler cohort as an example which consider the sample from "MT1" traveler as query and other samples as source to describe the pipline of microDELTA. The output of each step is shown below the code block.
 
-#### Ontology construct
+To run microDELTA analysis easily, just use `python microDELTA.py` and set the parameters like:
+```
+python microDELTA.py -O microbiomes.txt \
+        -l experiments_repeat/exp_1/SourceMapper.csv
+        -S experiments_repeat/exp_1/SourceCM.tsv
+        -Q experiments_repeat/exp_1/QueryCM.tsv
+        -m ../aging/mst/model/disease_model
+        -o experiments_repeat/exp_1
+```
+We also describe the details of our pipeline below.
+
+## Pipeline details
+### Ontology construct
 The microDELTA pipeline includes several steps. First, the ontology of the gut microbiome is constructed by creating a hierarchy of bacterial taxa and linking them to different host statuses. This step is performed using the `expert construct` command, which takes as input a text file [microbiomes.txt]('traveler/microbiomes.txt') containing the host statuses and produces an ontology file in the form of a pickle object.
 ```
 expert construct -i microbiomes.txt -o ontology.pkl
