@@ -68,7 +68,7 @@ expert transfer -i experiments_repeat/exp_1/SourceCM.h5 -t ontology.pkl \
 To performance Neural Network method, use `expert train` to train a independent model by source data.
 ```
 expert train -i nn_result/exp_1/SourceCM.h5 -t ontology.pkl \
-        -l nn_result/exp_$i/SourceLabels.h5 -o nn_result/exp_1/NN
+        -l nn_result/exp_1/SourceLabels.h5 -o nn_result/exp_1/NN
 ```
 #### Validate the model
 Once the model is trained, it can be used to make predictions about the gut microbiome of new hosts using the expert search command. This step takes as input the trained model and a set of unseen test data, and produces predictions about the gut microbiome of the test data.
