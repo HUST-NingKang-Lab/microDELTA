@@ -56,7 +56,7 @@ The status of each sample can be mapped to the ontology using the `expert map` c
 ```
 expert map --to-otlg -t ontology.pkl -i experiments_repeat/exp_1/SourceMapper.csv -o experiments_repeat/exp_1/SourceLabels.h5
 
-expert map --to-otlg -t ontology.pkl -i nn_result/exp_$i/QueryMapper.csv -o nn_result/exp_$i/QueryLabels.h5
+expert map --to-otlg -t ontology.pkl -i nn_result/exp_1/QueryMapper.csv -o nn_result/exp_1/QueryLabels.h5
 ```
 #### Train the model
 With the input data prepared, the model can be trained using the `expert transfer` command. This step uses transfer learning to fine-tune a pre-trained [base model](aging/mst/model/disease_model)  to the specific input data. The resulting model can then be used to make predictions about the gut microbiome of new hosts.
