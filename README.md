@@ -34,13 +34,14 @@ microbe2    0   0   ...
 ```
 
 ### Example
-We take a experiment of the Chinese traveler cohort as an example which consider the sample from "MT1" traveler as query and other samples as source to describe the pipline of microDELTA.
+We take a experiment of the Chinese traveler cohort as an example which consider the sample from "MT1" traveler as query and other samples as source to describe the pipline of microDELTA. The output of each step is shown below the code block.
 
 #### Ontology construct
 The microDELTA pipeline includes several steps. First, the ontology of the gut microbiome is constructed by creating a hierarchy of bacterial taxa and linking them to different host statuses. This step is performed using the `expert construct` command, which takes as input a text file [microbiomes.txt]('traveler/microbiomes.txt') containing the host statuses and produces an ontology file in the form of a pickle object.
 ```
 expert construct -i microbiomes.txt -o ontology.pkl
 ```
+![](readme_figure/step1.jpg)
 #### Data convert
 Next, the input data are converted into a format that can be used by the model. This is done using the `expert convert` command, which takes as input a directory containing the input files ([SourceCM.tsv](traveler/experiments_repeat/exp_1/SourceCM.tsv ) and [QueryCM.tsv](traveler/experiments_repeat/exp_1/QueryCM.tsv)) and produces a binary data file in the h5 format.
 
@@ -51,6 +52,7 @@ expert convert -i tmp --in-cm -o experiments_repeat/exp_1/SourceCM.h5
 ls experiments_repeat/exp_1/QueryCM.tsv > tmp
 expert convert -i tmp --in-cm -o experiments_repeat/exp_1/QueryCM.h5
 ```
+![](readme_figure/step2.jpg)
 #### Source mapping
 The status of each sample can be mapped to the ontology using the `expert map` command. This step associates each sample in the input data ([SourceMapper.csv](traveler/experiments_repeat/exp_1/SourceMapper.csv) and [QueryMapper.csv](traveler/experiments_repeat/exp_1/QueryMapper.csv)) with a specific host status, based on the ontology.
 ```
@@ -58,6 +60,7 @@ expert map --to-otlg -t ontology.pkl -i experiments_repeat/exp_1/SourceMapper.cs
 
 expert map --to-otlg -t ontology.pkl -i nn_result/exp_1/QueryMapper.csv -o nn_result/exp_1/QueryLabels.h5
 ```
+![](readme_figure/step3.jpg)
 #### Train the model
 With the input data prepared, the model can be trained using the `expert transfer` command. This step uses transfer learning to fine-tune a pre-trained [base model](aging/mst/model/disease_model)  to the specific input data. The resulting model can then be used to make predictions about the gut microbiome of new hosts.
 ```
@@ -65,13 +68,18 @@ expert transfer -i experiments_repeat/exp_1/SourceCM.h5 -t ontology.pkl \
         -l experiments_repeat/exp_1/SourceLabels.h5 -o experiments_repeat/exp_1/Transfer_DM \
         -m ../aging/mst/model/base_model --finetune --update-statistics
 ```
+![](readme_figure/step4_1.jpg)
 To performance Neural Network method, use `expert train` to train a independent model by source data.
 ```
 expert train -i nn_result/exp_1/SourceCM.h5 -t ontology.pkl \
         -l nn_result/exp_1/SourceLabels.h5 -o nn_result/exp_1/NN
 ```
+![](readme_figure/step4_2.jpg)
 #### Validate the model
 Once the model is trained, it can be used to make predictions about the gut microbiome of new hosts using the expert search command. This step takes as input the trained model and a set of unseen test data, and produces predictions about the gut microbiome of the test data.
 ```
+expert search -i experiments_repeat/exp_1/QueryCM.h5 -m experiments_repeat/exp_1/Transfer_DM -o experiments_repeat/exp_1/Search_Transfer_DM
+
 expert search -i nn_result/exp_1/QueryCM.h5 -m nn_result/exp_1/NN -o nn_result/exp_1/Search
 ```
+![](readme_figure/step5.jpg)
