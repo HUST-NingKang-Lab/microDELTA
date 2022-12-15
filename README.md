@@ -94,7 +94,7 @@ expert train -i nn_result/exp_1/SourceCM.h5 -t ontology.pkl \
         -l nn_result/exp_1/SourceLabels.h5 -o nn_result/exp_1/NN
 ```
 ![](readme_figure/step4_2.jpg)
-#### Validate the model
+### Test the model
 Once the model is trained, it can be used to make predictions about the gut microbiome of new hosts using the expert search command. This step takes as input the trained model and a set of unseen test data, and produces predictions about the gut microbiome of the test data.
 ```
 expert search -i experiments_repeat/exp_1/QueryCM.h5 -m experiments_repeat/exp_1/Transfer_DM -o experiments_repeat/exp_1/Search_Transfer_DM
