@@ -2,18 +2,12 @@ import argparse
 import os
 
 argparser = argparse.ArgumentParser(description = 'microDELTA: a tool for tracing tracing longitudinal changes in the human gut microbiome')
-argparser.add_argument('-O', '--overall', help = 'Overall status of the hosts in csv format',
-                       default = 'microbiomes.txt')
-argparser.add_argument('-l', '--label', help = 'Label of the hosts in csv format',
-                       default = 'experiments_repeat/exp_1/SourceMapper.csv')
-argparser.add_argument('-o', '--output', help = 'Directory to store the intermediate files',
-                       default = 'experiments_repeat/exp_1')
-argparser.add_argument('-S', '--source', help = 'Abundance of training samples in tsv format',
-                       default = 'experiments_repeat/exp_1/SourceCM.tsv')
-argparser.add_argument('-Q', '--query', help = 'Abundance of testing samples in tsv format',
-                       default = 'experiments_repeat/exp_1/QueryCM.tsv')
-argparser.add_argument('-m', '--model', help = 'Base model directory. If not specified, an independent model will be trained',
-                      default = '../aging/mst/model/disease_model')
+argparser.add_argument('-O', '--overall', help = 'Overall status of the hosts in csv format')
+argparser.add_argument('-l', '--label', help = 'Label of the hosts in csv format')
+argparser.add_argument('-o', '--output', help = 'Directory to store the intermediate files')
+argparser.add_argument('-S', '--source', help = 'Abundance of training samples in tsv format')
+argparser.add_argument('-Q', '--query', help = 'Abundance of testing samples in tsv format')
+argparser.add_argument('-m', '--model', help = 'Base model directory. If not specified, an independent model will be trained')
 
 args = argparser.parse_args()
 
@@ -22,7 +16,6 @@ os.system(f'ls {args.source} > tmp; expert convert -i tmp --in-cm -o {args.outpu
 os.system(f'ls {args.query} > tmp; expert convert -i tmp --in-cm -o {args.output}/QueryCM.h5')
 
 os.system(f'expert map --to-otlg -t {args.output}/ontology.pkl -i {args.label} -o {args.output}/SourceLabels.h5')
-os.system(f'expert map --to-otlg -t {args.output}/ontology.pkl -i {args.label} -o {args.output}/QueryLabels.h5')
 
 if args.model:
     os.system(f'expert transfer -i {args.output}/SourceCM.h5 -t {args.output}/ontology.pkl \
