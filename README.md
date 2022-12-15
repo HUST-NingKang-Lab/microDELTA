@@ -2,15 +2,14 @@
 microDELTA is a deep learning method for tracing longitudinal changes in the human gut microbiome. The method is based on neural networks and transfer learning, and can be used to model dynamic patterns of gut microbial communities at different life stages, including infancy, middle age, and old age. 
 
 ![](microDELTA.jpg)
-The overall framework for tracing the life trajectory of human microbiome based on NN models and transfer learning. **a.** Base model is a NN model that has been built based on from thousands to millions of samples collected from public databases. **b.** Transfer model is built based on transferring the knowledge from the base model into context, by means of using a small proportion of samples in the context. **c.** In transfer step, microDELTA	 adapts base model to newly introduced context and reinitialize the contextual layers. In adaption step, microDELTA optimizes the parameters of contextual layers rapidly. In fine-tuning step, microDELTA further optimizes the parameters of whole network and then outputs the transfer model. **d.** For many samples in the context, the transferred model could be used to determine the life trajectory of the host such as age, disease status, etc.
+The overall framework of microDELTA. **a.** Base model is a NN model that has been built based on thousands to millions of samples collected from public databases. **b.** Transfer model is built based on transferring the knowledge from the base model into context, by means of using a small proportion of samples in the context. **c.** In transfer step, microDELTA	 adapts base model to newly introduced context and reinitialize the contextual layers. In adaption step, microDELTA optimizes the parameters of contextual layers rapidly. In fine-tuning step, microDELTA further optimizes the parameters of whole network and then outputs the transfer model. **d.** For many samples in the context, the transferred model could be used to determine the life trajectory of the host such as age, disease status, etc.
  
 
 
 ## Requirement
 The microDELTA method is based on [EXPERT](https://github.com/HUST-NingKang-Lab/EXPERT). Install EXPERT using pip:
 ```
-pip install expert-mst    # Install EXPERT
-expert init               # Initialize EXPERT and install NCBI taxonomy database
+conda env create -f enviroment.yaml
 ```
 ## Command line instructions
 To run microDELTA analysis easily, just use `python microDELTA.py` and set the parameters like:
@@ -36,29 +35,29 @@ root:status2
 |host3|status3|
 |...|...|
 
-`-S` and `-Q`: Two `tsv` files contain the abundance of gut microbial communities of training sample and testing sample. The columns represent hosts and the rows represents features. We consider `SourceCM.tsv` for training and `QueryCM.tsv` for validating. The format of these `tsv` looks like:
+`-S` and `-Q`: Two `tsv` files contain the abundance of gut microbial communities of training sample and testing sample. The columns represent hosts and the rows represents features. We consider `SourceCM.tsv` for training and `QueryCM.tsv` for validating. The format of these `tsv` files looks like:
 |#OTU ID| host1| host2|...|
 |---|---|---|---|
 |microbe1|0.01|0.05|...|
 |microbe2|0|0.02|...|
 |...|...|...|...|
 
-`-m`: Base model directory. If not specified, an independent model will be trained. We 
+`-m`: Base model directory. If not specified, an independent model will be trained. we put our [base model](aging/mst/model/base_model) in this directory `aging/mst/model/base_model`.
 
-`-o`:
+`-o`: Output directory to store the result. 
 
 
 ## Example
-We take a experiment of the Chinese traveler cohort as an example which consider the sample from "MT1" traveler as query and other samples as source to describe the pipline of microDELTA. The output of each step is shown below the code block.
+We take a experiment of the Chinese traveler cohort as an example which consider the samples from traveler "MT1" as query and other samples as source to describe the pipline of microDELTA. More information about this cohort please refer to [here]().
 
 You can perform this analysis via microDELTA.py and set the parameters as below:
 ```
-python microDELTA.py -O microbiomes.txt \
-        -l experiments_repeat/exp_1/SourceMapper.csv \
-        -S experiments_repeat/exp_1/SourceCM.tsv \
-        -Q experiments_repeat/exp_1/QueryCM.tsv \
-        -m ../aging/mst/model/disease_model \
-        -o experiments_repeat/exp_1 \
+python microDELTA.py -O traveler/microbiomes.txt \
+        -l traveler/experiments_repeat/exp_1/SourceMapper.csv \
+        -S traveler/experiments_repeat/exp_1/SourceCM.tsv \
+        -Q traveler/experiments_repeat/exp_1/QueryCM.tsv \
+        -m aging/mst/model/base_model \
+        -o traveler/experiments_repeat/exp_1 
 ```
 You can also perform this analysis by [EXPERT](https://github.com/HUST-NingKang-Lab/EXPERT) step by step as below:
 ### Ontology construct
@@ -87,7 +86,7 @@ expert map --to-otlg -t ontology.pkl -i nn_result/exp_1/QueryMapper.csv -o nn_re
 ```
 ![](readme_figure/step3.jpg)
 ### Train the model
-With the input data prepared, the model can be trained using the `expert transfer` command. This step uses transfer learning to fine-tune a pre-trained [base model](aging/mst/model/disease_model)  to the specific input data. The resulting model can then be used to make predictions about the gut microbiome of new hosts.
+With the input data prepared, the model can be trained using the `expert transfer` command. This step uses transfer learning to fine-tune a pre-trained [base model](aging/mst/model/base_model) to the specific input data. The resulting model can then be used to make predictions about the gut microbiome of new hosts.
 ```
 expert transfer -i experiments_repeat/exp_1/SourceCM.h5 -t ontology.pkl \
         -l experiments_repeat/exp_1/SourceLabels.h5 -o experiments_repeat/exp_1/Transfer_DM \
