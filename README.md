@@ -1,7 +1,10 @@
 # microDELTA
-microDELTA is a deep learning method for tracing longitudinal changes in the human gut microbiome. The method is based on neural networks and transfer learning, and can be used to model dynamic patterns of gut microbial communities at different life stages, including infancy, middle age, and old age. The method takes as input two files containing the abundance of gut microbial communities for a given set of hosts, and uses these data to train a model that can be used to make predictions about the gut microbiome of new hosts. The method also includes an ontology construction step and a data conversion step to make the input data compatible with the model. We have examined microDELTA in several representative contexts: ranging from birth through adulthood to elderly. First, we used microDELTA to illustrate the influence of delivery mode on infant gut microbial communities based on an infant cohort. Second, we examined the spatial-temporal dynamic pattern of gut microbial communities for long-term dietary shifts during international travel based on a Chinese traveler cohort. Third, we explored the seasonal dynamic patterns of gut microbial communities for the Hadza hunter-gatherers. Finally, we analyzed the distinctive gut microbial pattern for elderly people.
+microDELTA is a deep learning method for tracing longitudinal changes in the human gut microbiome. The method is based on neural networks and transfer learning, and can be used to model dynamic patterns of gut microbial communities at different life stages, including infancy, middle age, and old age. 
 
-![](microDELTA.png)
+![](microDELTA.jpg)
+The overall framework for tracing the life trajectory of human microbiome based on NN models and transfer learning. **a.** Base model is a NN model that has been built based on from thousands to millions of samples collected from public databases. **b.** Transfer model is built based on transferring the knowledge from the base model into context, by means of using a small proportion of samples in the context. **c.** In transfer step, microDELTA	 adapts base model to newly introduced context and reinitialize the contextual layers. In adaption step, microDELTA optimizes the parameters of contextual layers rapidly. In fine-tuning step, microDELTA further optimizes the parameters of whole network and then outputs the transfer model. **d.** For many samples in the context, the transferred model could be used to determine the life trajectory of the host such as age, disease status, etc.
+ 
+
 
 ## Requirement
 The microDELTA method is based on [EXPERT](https://github.com/HUST-NingKang-Lab/EXPERT). Install EXPERT using pip:
@@ -19,7 +22,7 @@ python microDELTA.py -O overall_status.txt \
         -m base_model_directory \
         -o output_directory \
 ```
-###  Input files
+###  File descriptions
 `-O`: A `txt` file contains the overall status of the hosts. The content in this file include the class of host status like:
 ```
 root:status1
@@ -33,13 +36,16 @@ root:status2
 |host3|status3|
 |...|...|
 
-`-S` and `-Q`: Two `tsv` files contain the abundance of gut microbial communities of training sample and testing sample. The columns represent hosts and the rows represents features. We consider `SourceCM.tsv` for training and `QueryCM.tsv` for validating like:
-
+`-S` and `-Q`: Two `tsv` files contain the abundance of gut microbial communities of training sample and testing sample. The columns represent hosts and the rows represents features. We consider `SourceCM.tsv` for training and `QueryCM.tsv` for validating. The format of these `tsv` looks like:
 |#OTU ID| host1| host2|...|
 |---|---|---|---|
-|microbe1|0|0|...|
-|microbe2|0|0|...|
+|microbe1|0.01|0.05|...|
+|microbe2|0|0.02|...|
 |...|...|...|...|
+
+`-m`: Base model directory. If not specified, an independent model will be trained. We 
+
+`-o`:
 
 
 ## Example
@@ -54,7 +60,7 @@ python microDELTA.py -O microbiomes.txt \
         -m ../aging/mst/model/disease_model \
         -o experiments_repeat/exp_1 \
 ```
-You can also perform this analysis by [EXPERT](https://github.com/HUST-NingKang-Lab/EXPERT) step by step.
+You can also perform this analysis by [EXPERT](https://github.com/HUST-NingKang-Lab/EXPERT) step by step as below:
 ### Ontology construct
 The microDELTA pipeline includes several steps. First, the ontology of the gut microbiome is constructed by creating a hierarchy of host statuses. This step is performed using the `expert construct` command, which takes as input a text file [microbiomes.txt]('traveler/microbiomes.txt') containing the host statuses and produces an ontology file in the form of a pickle object.
 ```
