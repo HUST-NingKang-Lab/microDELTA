@@ -48,7 +48,7 @@ root:status2
 |microbe2|0|0.02|...|
 |...|...|...|...|
 
-`-m`: Base model directory. If not specified, an independent model will be trained. we put our [base model](aging/mst/model/base_model) in this directory `aging/mst/model/base_model`.
+`-m`: Base model directory. If not specified, an independent model will be trained. We put our [base model](aging/mst/model/base_model) in this directory `aging/mst/model/base_model`.
 
 `-o`: Output directory to store the result. 
 
