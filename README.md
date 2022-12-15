@@ -48,7 +48,7 @@ root:status2
 
 
 ## Example
-We take a experiment of the Chinese traveler cohort as an example which consider the samples from traveler "MT1" as query and other samples as source to describe the pipline of microDELTA. More information about this cohort please refer to [here]().
+We take a experiment of the Chinese traveler cohort as an example which consider the samples from traveler "MT1" as query and other samples as source to describe the pipline of microDELTA. More information about this cohort please refer to [here](https://gut.bmj.com/content/68/12/2254).
 
 You can perform this analysis via microDELTA.py and set the parameters as below:
 ```
