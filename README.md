@@ -10,24 +10,22 @@ pip install expert-mst    # Install EXPERT
 expert init               # Initialize EXPERT and install NCBI taxonomy database
 ```
 ## Command line instructions
+To run microDELTA analysis easily, just use `python microDELTA.py` and set the parameters like:
 ```
-optional arguments:
-  -h, --help            show this help message and exit
-  -O OVERALL, --overall Overall status of the hosts in csv format
-  -l LABEL, --label Label of the hosts in csv format
-  -S SOURCE, --source Abundance of training samples in tsv format
-  -Q QUERY, --query Abundance of testing samples in tsv format
-  -m MODEL, --model Base model directory. If not specified, an independent model will be trained
-  -o OUTPUT, --output Directory to store the result
-
+python microDELTA.py -O overall_status.txt \
+        -l label.csv \
+        -S source.tsv \
+        -Q query.tsv \
+        -m base_model_directory \
+        -o output_directory \
 ```
-## Input files
-A `txt` file contains the overall status of the hosts. The content in this file include the class of host status like:
+###  Input files
+`-O`: A `txt` file contains the overall status of the hosts. The content in this file include the class of host status like:
 ```
 root:status1
 root:status2
 ```
-A `csv` file contains the metadata of the. The first column named `SampleID` contains the index of each host and the second column named `Env` contains the status of each host like:
+`-l`: A `csv` file contains the label of each host. The first column named `SampleID` contains the index of each host and the second column named `Env` contains the status of each host like:
 |SampleID|Env|
 |---|---|
 |host1|status1|
@@ -35,7 +33,7 @@ A `csv` file contains the metadata of the. The first column named `SampleID` con
 |host3|status3|
 |...|...|
 
-Two `tsv` files contain the abundance of gut microbial communities of training sample and testing sample. The columns represent hosts and the rows represents features. We consider `SourceCM.tsv` for training and `QueryCM.tsv` for validating like:
+`-S` and `-Q`: Two `tsv` files contain the abundance of gut microbial communities of training sample and testing sample. The columns represent hosts and the rows represents features. We consider `SourceCM.tsv` for training and `QueryCM.tsv` for validating like:
 
 |#OTU ID| host1| host2|...|
 |---|---|---|---|
@@ -47,18 +45,16 @@ Two `tsv` files contain the abundance of gut microbial communities of training s
 ## Example
 We take a experiment of the Chinese traveler cohort as an example which consider the sample from "MT1" traveler as query and other samples as source to describe the pipline of microDELTA. The output of each step is shown below the code block.
 
-To run microDELTA analysis easily, just use `python microDELTA.py` and set the parameters like:
+You can perform this analysis via microDELTA.py and set the parameters as below:
 ```
 python microDELTA.py -O microbiomes.txt \
-        -l experiments_repeat/exp_1/SourceMapper.csv
-        -S experiments_repeat/exp_1/SourceCM.tsv
-        -Q experiments_repeat/exp_1/QueryCM.tsv
-        -m ../aging/mst/model/disease_model
-        -o experiments_repeat/exp_1
+        -l experiments_repeat/exp_1/SourceMapper.csv \
+        -S experiments_repeat/exp_1/SourceCM.tsv \
+        -Q experiments_repeat/exp_1/QueryCM.tsv \
+        -m ../aging/mst/model/disease_model \
+        -o experiments_repeat/exp_1 \
 ```
-We also describe the details of our pipeline below.
-
-## Pipeline details
+You can also perform this analysis by [EXPERT](https://github.com/HUST-NingKang-Lab/EXPERT) step by step.
 ### Ontology construct
 The microDELTA pipeline includes several steps. First, the ontology of the gut microbiome is constructed by creating a hierarchy of host statuses. This step is performed using the `expert construct` command, which takes as input a text file [microbiomes.txt]('traveler/microbiomes.txt') containing the host statuses and produces an ontology file in the form of a pickle object.
 ```
