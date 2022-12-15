@@ -107,9 +107,9 @@ expert transfer -i traveler/experiments_repeat/exp_1/SourceCM.h5 \
 ![](readme_figure/step4_1.jpg)
 To performance Neural Network method, use `expert train` to train a independent model by source data.
 ```
-expert train -i traveler/nn_result/exp_1/SourceCM.h5 -t traveler/ontology.pkl \
-        -l traveler/nn_result/exp_1/SourceLabels.h5 \
-        -o traveler/nn_result/exp_1/NN
+expert train -i traveler/experiments_repeat/exp_1/SourceCM.h5 -t traveler/ontology.pkl \
+        -l traveler/experiments_repeat/exp_1/SourceLabels.h5 \
+        -o traveler/experiments_repeat/exp_1/NN
 ```
 ![](readme_figure/step4_2.jpg)
 ### Test the model
