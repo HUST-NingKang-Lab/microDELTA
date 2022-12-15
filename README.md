@@ -65,7 +65,8 @@ python microDELTA.py -O traveler/microbiomes.txt \
         -m aging/mst/model/base_model \
         -o traveler/experiments_repeat/exp_1 
 ```
-You can also perform this analysis by [EXPERT](https://github.com/HUST-NingKang-Lab/EXPERT) step by step as below:
+You can also perform this analysis by [EXPERT](https://github.com/HUST-NingKang-Lab/EXPERT) along the microDELTA pipeline as below:
+
 ### Ontology construct
 The microDELTA pipeline includes several steps. First, the ontology of the gut microbiome is constructed by creating a hierarchy of host statuses. This step is performed using the `expert construct` command, which takes as input a text file [microbiomes.txt]('traveler/microbiomes.txt') containing the host statuses and produces an ontology file in the form of a pickle object.
 ```
